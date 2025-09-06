@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "redacted",
+		"name": "Functions",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29060977"
+	},
+	"item": [
+		{
+			"name": "sendEmail",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "{{apiKey}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "apiKey",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"collection\": \"{{collection}}\",\n    \"document\": \"{{document}}\",\n    \"email\": \"redacted\",\n    \"message\": \"<table style=\\\"width:100%;font-family:Calibri, serif;\\\"><tbody><tr><td style=\\\"text-align:left;font-size:22px;font-weight:bold;\\\">Example Zürich</td></tr><tr><td style=\\\"text-align:left;\\\">Hauptstrasse 123</td></tr><tr><td style=\\\"text-align:left;\\\">8048 Zürich</td></tr><tr><td style=\\\"text-align:left;\\\">076 222 77 67</td></tr><tr><td style=\\\"min-height:20px;\\\"></td></tr></tbody></table><table style=\\\"width:100%;font-family:Calibri, serif;\\\"><tbody><tr><td style=\\\"text-align:left;font-size:22px;font-weight:bold;\\\">redacted</td></tr><tr><td style=\\\"text-align:left;\\\">0123456789</td></tr><tr><td>redacted</td></tr></tbody></table><table style=\\\"width:100%;font-family:Calibri, serif;\\\"><tr><td><hr></td></tr><tr><td><table><tbody><tr><td style=\\\"width:150px;font-weight:bold;\\\">Bestellnummer:</td><td style=\\\"width:150px;\\\">N32X2DF8</td></tr><tr><td style=\\\"font-weight:bold;\\\">Bestellzeitpunkt:</td><td>redacted</td></tr><tr><td style=\\\"font-weight:bold;\\\">Liefermodus:</td><td style=\\\"white-space:nowrap;\\\">Abholung</td></tr></tbody></table></td></tr><tr><td><hr></td></tr><tr><td><table style=\\\"width:100%;\\\"><tbody><tr><td style=\\\"text-align:center;vertical-align:top;font-weight:bold;;font-size:15px;width:45px;\\\">1</td><td></td><td style=\\\"text-align:left;vertical-align:top;\\\"><span style=\\\"font-size:15px;font-weight:bold;\\\">Pide</span></td><td></td><td></td><td style=\\\"text-align:right;padding-right:15px;vertical-align:top;font-weight:bold;;width:60px;font-size:15px;\\\">13.50</td></tr><tr><td style=\\\"text-align:center;vertical-align:top;;font-size:15px;width:45px;\\\">1</td><td></td><td style=\\\"\\\"><span style=\\\"font-size:14px;\\\">Sucuk</span></td><td></td><td></td><td style=\\\"text-align:right;padding-right:15px;vertical-align:top;;width:60px;font-size:15px;\\\">4.00</td></tr><tr><td style=\\\"text-align:center;vertical-align:top;font-weight:bold;;font-size:15px;width:45px;\\\">2</td><td></td><td style=\\\"text-align:left;vertical-align:top;\\\"><span style=\\\"font-size:15px;font-weight:bold;\\\">Hamburger</span></td><td></td><td></td><td style=\\\"text-align:right;padding-right:15px;vertical-align:top;font-weight:bold;;width:60px;font-size:15px;\\\">20.00</td></tr><tr><td colspan=\\\"7\\\"></td></tr></tbody></table></td></tr><tr><td><hr></td></tr><tr><td><table style=\\\"margin-right:0;margin-left:auto;\\\"><tbody><tr><td style=\\\"text-align:right;font-weight:bold;font-size:18px;\\\">Gesamt (inkl. MwSt.):</td><td style=\\\"text-align:right;font-weight:bold;font-size:18px;\\\">CHF</td><td style=\\\"text-align:right;font-weight:bold;font-size:18px;\\\">41.40</td></tr></tbody></table></td></tr><tr><td><br></td></tr><tr><td><hr></td></tr></table>\",\n    \"userSubject\": \"Bestellbestätigung Example\",\n    \"restaurantSubject\": \"Bestellbestätigung Max Mustermann\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/sendEmail",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"sendEmail"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "redacted",
+			"type": "string"
+		},
+		{
+			"key": "email",
+			"value": "redacted",
+			"type": "string"
+		},
+		{
+			"key": "message",
+			"value": "<table style=\"width:100%;font-family:Calibri, serif;\">\n    <tbody>\n        <tr>\n            <td style=\"text-align:left;font-size:22px;font-weight:bold;\">Example Zürich</td>\n        </tr>\n        <tr>\n            <td style=\"text-align:left;\">Hauptstrasse 123</td>\n        </tr>\n        <tr>\n            <td style=\"text-align:left;\">\n                8048 Zürich\n            </td>\n        </tr>\n        <tr>\n            <td style=\"text-align:left;\">\n                redacted\n            </td>\n        </tr>\n        <tr>\n            <td style=\"min-height:20px;\"></td>\n        </tr>\n    </tbody>\n</table>\n<table style=\"width:100%;font-family:Calibri, serif;\">\n    <tbody>\n        <tr>\n            <td style=\"text-align:left;font-size:22px;font-weight:bold;\">redacted</td>\n        </tr>\n        <tr>\n            <td style=\"text-align:left;\">redacted</td>\n        </tr>\n        <tr>\n            <td>\n                redacted\n            </td>\n        </tr>\n    </tbody>\n</table>\n\n<table style=\"width:100%;font-family:Calibri, serif;\">\n    <tr>\n        <td>\n            <hr>\n        </td>\n    </tr>\n    <tr>\n        <td>\n            <table>\n                <tbody>\n                    <tr>\n                        <td style=\"width:150px;font-weight:bold;\">Bestellnummer:</td>\n                        <td style=\"width:150px;\">N32X2DF8</td>\n                    </tr>\n                    <tr>\n                        <td style=\"font-weight:bold;\">Bestellzeitpunkt:</td>\n                        <td>redacted</td>\n                    </tr>\n                    <tr>\n                        <td style=\"font-weight:bold;\">Liefermodus:</td>\n                        <td style=\"white-space:nowrap;\">Abholung</td>\n                    </tr>\n                </tbody>\n            </table>\n        </td>\n    </tr>\n    <tr>\n        <td>\n            <hr>\n        </td>\n    </tr>\n    <tr>\n        <td>\n            <table style=\"width:100%;\">\n                <tbody>\n                    <tr>\n        <td style=\"text-align:center;vertical-align:top;font-weight:bold;;font-size:15px;width:45px;\">\n            1\n        </td>\n        <td></td>\n        <td style=\"text-align:left;vertical-align:top;\">\n            <span style=\"font-size:15px;font-weight:bold;\">\n                Pide\n            </span>\n        </td>\n        <td></td>\n        <td></td>\n        <td style=\"text-align:right;padding-right:15px;vertical-align:top;font-weight:bold;;width:60px;font-size:15px;\">\n            13.50\n        </td>\n    </tr>    <tr>\n        <td style=\"text-align:center;vertical-align:top;;font-size:15px;width:45px;\">\n            1\n        </td>\n        <td></td>\n        <td style=\"\">\n            <span style=\"font-size:14px;\">\n                Sucuk\n            </span>\n        </td>\n        <td></td>\n        <td></td>\n        <td style=\"text-align:right;padding-right:15px;vertical-align:top;;width:60px;font-size:15px;\">\n            4.00\n        </td>\n    </tr>    <tr>\n        <td style=\"text-align:center;vertical-align:top;font-weight:bold;;font-size:15px;width:45px;\">\n            2\n        </td>\n        <td></td>\n        <td style=\"text-align:left;vertical-align:top;\">\n            <span style=\"font-size:15px;font-weight:bold;\">\n                Hamburger\n            </span>\n        </td>\n        <td></td>\n        <td></td>\n        <td style=\"text-align:right;padding-right:15px;vertical-align:top;font-weight:bold;;width:60px;font-size:15px;\">\n            20.00\n        </td>\n    </tr>    <tr>\n                        <td colspan=\"7\"></td>\n                    </tr>\n                </tbody>\n            </table>\n        </td>\n    </tr>\n    <tr>\n        <td>\n            <hr>\n        </td>\n    </tr>\n    <tr>\n        <td>\n            <table style=\"margin-right:0;margin-left:auto;\">\n                <tbody>\n                    <tr>\n                        <td style=\"text-align:right;font-weight:bold;font-size:18px;\">Gesamt (inkl. MwSt.):</td>\n                        <td style=\"text-align:right;font-weight:bold;font-size:18px;\">CHF</td>\n                        <td style=\"text-align:right;font-weight:bold;font-size:18px;\">41.40</td>\n                    </tr>\n                </tbody>\n            </table>\n        </td>\n    </tr>\n    <tr>\n        <td>\n            <br>\n        </td>\n    </tr>\n\n    <tr>\n        <td>\n            <hr>\n        </td>\n    </tr>\n</table>",
+			"type": "string"
+		},
+		{
+			"key": "userSubject",
+			"value": "Bestellbestätigung Example",
+			"type": "string"
+		},
+		{
+			"key": "restaurantSubject",
+			"value": "Bestellbestätigung Max Mustermann",
+			"type": "string"
+		}
+	]
+}
